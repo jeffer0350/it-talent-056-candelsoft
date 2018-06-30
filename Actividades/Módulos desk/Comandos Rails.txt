@@ -1,0 +1,23 @@
+--Crear nuevo proyecto en rails
+rails new name_project
+
+--Crear nuevo proyecto en rails con postgresql
+rails new CRUD -d postgresql
+
+--Crear un controlador para coenxion a las BD
+rail generate controller usuario
+
+--Crear Modelo de COnexion a la BD
+rails generate model usuario
+
+
+
+
+Rails.application.routes.draw do
+  resources :elementos
+  get 'welcome/index'
+  get 'welcome/mivista'
+  get 'welcome/mivistajson'
+
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+end
